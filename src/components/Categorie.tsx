@@ -51,9 +51,10 @@ export default function Categories() {
   };
 
   return (
-    <div className="relative pt-6 px-10 flex items-center gap-3">
+   <div>
+     <div className="relative pt-6 px-10 flex items-center gap-3">
       {scrollPosition > 0 && (
-        <button onClick={() => handleScroll(ScrollDirection.LEFT)} className="p-1 bg-white rounded-full border border-black z-10 font-bold flex items-center justify-center text-sm">
+        <button onClick={() => handleScroll(ScrollDirection.LEFT)} className="p-1 bg-white rounded-full border border-black z-10 font-bold hidden md:flex items-center justify-center text-sm">
           <RiArrowLeftSLine  />
         </button>
       )}
@@ -72,14 +73,16 @@ export default function Categories() {
         </div>
       </div>
       {scrollPosition < categoriesList.length * 200 - 400 && (
-        <button onClick={() => handleScroll(ScrollDirection.RIGHT)} className="p-1 bg-white rounded-full border border-black z-10 font-bold flex items-center justify-center text-sm">
+        <button onClick={() => handleScroll(ScrollDirection.RIGHT)} className="p-1 bg-white rounded-full border border-black z-10 font-bold  items-center justify-center text-sm hidden md:flex">
           <RiArrowRightSLine />
         </button>
       )}
-      <button className="border border-[#000] flex items-center gap-1 p-2 rounded-md cursor-pointer">
-        <span><IoFilterSharp/></span><span>Filtres</span>
+      <button className="border border-[#000] md:flex items-center gap-1 p-2 rounded-md cursor-pointer hidden ">
+        <span ><IoFilterSharp/></span><span>Filtres</span>
       </button>
       
     </div>
+     <hr/>
+   </div>
   );
 }

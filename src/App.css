@@ -30,6 +30,7 @@ body {
   transition: opacity 0.3s ease;
 }
 
+
 .carousel-root:hover .carousel.carousel-slider .control-arrow {
   display: flex;
   justify-content: center;
