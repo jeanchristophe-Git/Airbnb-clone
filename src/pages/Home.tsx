@@ -7,13 +7,13 @@ import LinksHome from "../components/LinksHome"
 
 export default function Home() {
   return (
-    <>
+    <div classname:"overflow-hidden">
       <Nav />
       <Search />
       <Categories />
       <CardList />
       <LinksHome />
       <Footer />
-    </>
+    <div/>
   )
 }
