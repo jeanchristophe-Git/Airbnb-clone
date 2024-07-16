@@ -7,7 +7,7 @@ import LinksHome from "../components/LinksHome"
 
 export default function Home() {
   return (
-    <div classname:"overflow-hidden">
+    <div className:"overflow-hidden">
       <Nav />
       <Search />
       <Categories />
